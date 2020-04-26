@@ -7,7 +7,7 @@ module.exports = function upload(req, res) {
   var curTime = new Date();
   var curTime2 = curTime.getTime();
   form.multiples = true;
-  form.uploadDir = path.join(__dirname, "../server/uploads");
+  form.uploadDir = path.join(__dirname, "../server/upload");
 
   form.on("file", (field, file) => {
     var fileName = curTime2 + "__" + file.name;
